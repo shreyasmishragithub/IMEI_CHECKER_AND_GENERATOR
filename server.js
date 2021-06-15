@@ -1,12 +1,15 @@
 import express, { request } from "express";
 import imei from "node-imei";
+import path from "path";
 //use the application off of express.
 var app = express();
 var IMEI=new imei();
+app.use(express.static("public"));
 //define the route for "/"
 app.get("/", function (request, response){
-    response.sendFile("C:/Users/Shreyas Mishra/Desktop/IMEI/views/index.html");
+    response.sendFile(path.join(__dirname,'static',"index.html"));
 });
+
 app.get("/getemail", function (request, response){
     var address = request.query.address;
     // const s=toString(address);
@@ -48,6 +51,7 @@ app.get("/getemail", function (request, response){
 });
 
 //start the server
-app.listen(8080);
 
-console.log("Something awesome to happen at http://localhost:8080"); 
+app.listen(process.env.PORT,()=>{
+  console.log("Something awesome to happen")  
+})
