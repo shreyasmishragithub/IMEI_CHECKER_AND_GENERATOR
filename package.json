@@ -1,0 +1,20 @@
+{
+  "name": "imei",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "global": "^4.4.0",
+    "imei": "^0.0.1",
+    "nodemon": "^2.0.7"
+  }
+}
